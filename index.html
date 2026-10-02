@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attorney Weekly Time & Travel Report</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-bar no-print">
+    <div>
+      <p class="eyebrow">WEEKLY REPORT</p>
+      <h1>Time &amp; Travel</h1>
+      <p class="app-help">Enter your week, review the totals, then save a PDF from Chrome's print dialog.</p>
+    </div>
+    <div class="toolbar">
+      <button id="clearButton" class="secondary" type="button">Clear week</button>
+      <button id="printButton" class="primary" type="button">Print / Save PDF</button>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section id="report" class="report" aria-label="Attorney weekly time and travel report">
+      <h2>ATTORNEY WEEKLY TIME AND TRAVEL REPORT</h2>
+
+      <div class="details-grid">
+        <label>Attorney name<input data-save name="attorney" autocomplete="name" value="Paul Lemke"></label>
+        <label>Week of<input data-save name="weekOf" type="date"></label>
+        <label>Parish<input data-save name="parish" value="Catahoula"></label>
+        <label>Defendant<input data-save name="defendant"></label>
+        <label>Conflict or contract<input data-save name="contract"></label>
+        <label>Rate of pay<input data-save name="rate" inputmode="decimal"></label>
+        <label>Charges<input data-save name="charges"></label>
+        <label>Notes<textarea data-save name="notes" rows="2"></textarea></label>
+      </div>
+
+      <section class="report-section">
+        <h3>PUBLIC DEFENDER TIME</h3>
+        <div class="table-scroll">
+          <table id="publicTable">
+            <thead><tr><th>Hours worked</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Sat/Sun</th><th>Total</th></tr></thead>
+            <tbody></tbody>
+            <tfoot><tr><th>Total hours</th><td data-day-total="0">0.0</td><td data-day-total="1">0.0</td><td data-day-total="2">0.0</td><td data-day-total="3">0.0</td><td data-day-total="4">0.0</td><td data-day-total="5">0.0</td><td class="grand-total" id="pdHours">0.0</td></tr></tfoot>
+          </table>
+        </div>
+
+        <div class="public-summary">
+          <ol class="instructions">
+            <li>Report public defender work-related time only. Do not include time worked on non-public matters.</li>
+            <li>“In office” includes research, pleading preparation, client meetings, and similar services.</li>
+            <li>“Out of office” includes investigations, opposing-counsel meetings, and similar services away from the office.</li>
+            <li>Include public defender work-related travel time only; do not include commuting time.</li>
+          </ol>
+          <div class="totals-box">
+            <div><span>Total PD miles</span><strong id="pdMiles">0</strong></div>
+            <div><span>Total PD hours</span><strong id="pdHoursBox">0.0</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-section private-section">
+        <h3>PRIVATE PRACTICE TIME</h3>
+        <div class="table-scroll">
+          <table id="privateTable">
+            <thead><tr><th>Hours worked</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Sat/Sun</th><th>Total</th></tr></thead>
+            <tbody><tr><th>Total hours</th></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="signatures">
+        <label>Signature<input data-save name="signature"></label>
+        <aside class="decimal-key" aria-label="Minute conversion reference">
+          <span>0.1 = 1–6 min</span><span>0.2 = 7–12 min</span><span>0.3 = 13–18 min</span><span>0.4 = 19–24 min</span>
+          <span>0.5 = 25–30 min</span><span>0.6 = 31–36 min</span><span>0.7 = 37–42 min</span>
+        </aside>
+        <label>Approved by<input data-save name="approvedBy"></label>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast no-print" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
