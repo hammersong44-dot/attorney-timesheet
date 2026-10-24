@@ -8,14 +8,14 @@
 * { box-sizing:border-box; }
 body { margin:0; color:var(--ink); background:var(--parchment); font-family:var(--sans); }
 .brandbar { background:var(--navy); border-bottom:2px solid var(--brass); color:var(--parchment); }
-.brandin { max-width:1120px; margin:0 auto; padding:14px 28px; display:flex; align-items:center; gap:14px; }
-.brandlogo { width:52px; height:52px; flex:none; }
-.brandname { margin:0; font:600 22px/1.15 var(--serif); }
-.brandsub { margin-top:4px; color:var(--brass); font:12px var(--mono); text-transform:uppercase; letter-spacing:.16em; }
+.brandin { max-width:1120px; margin:0 auto; padding:8px 28px; display:flex; align-items:center; gap:12px; }
+.brandlogo { width:34px; height:34px; flex:none; }
+.brandname { margin:0; font:600 18px/1.15 var(--serif); }
+.brandsub { margin-top:2px; color:var(--brass); font:10px var(--mono); text-transform:uppercase; letter-spacing:.16em; }
 .brandin .toolbar { margin-left:auto; }
-.app-intro { max-width:1120px; margin:0 auto; padding:26px 28px 14px; }
+.app-intro { max-width:1120px; margin:0 auto; padding:14px 28px 8px; }
 .eyebrow { margin:0 0 5px; color:var(--brass-dark); font:12px var(--mono); font-weight:600; letter-spacing:.16em; }
-.app-intro h1 { margin:0; font:600 34px/1.05 var(--serif); color:var(--navy); }
+.app-intro h1 { margin:0; font:600 26px/1.05 var(--serif); color:var(--navy); }
 .app-help { margin:8px 0 0; color:var(--muted); }
 .brand-foot { max-width:1120px; margin:0 auto; padding:14px 28px 40px; border-top:2px solid var(--brass); text-align:center; font-size:12.5px; color:var(--muted); }
 .brand-foot b { font:600 14px var(--serif); color:var(--ink); }
